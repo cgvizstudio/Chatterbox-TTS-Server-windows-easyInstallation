@@ -30,21 +30,13 @@ audio_output:
   sample_rate: 24000
   max_reference_duration_sec: 30
 ui_state:
-  last_text: 'The solar system consists of the Sun and the astronomical objects gravitationally
-    bound in orbit around it.
-
-    Mars, often called the Red Planet, is the fourth planet from the Sun. It is a
-    terrestrial planet with a thin atmosphere, having surface features reminiscent
-    both of the impact craters of the Moon and the volcanoes, valleys, deserts, and
-    polar ice caps of Earth.This app converts text into high-quality speech in multiple
-    languages. Users can input text and select a language
-
-    '
+  last_text: "When you rise above the storm\u2026 the light.......................\
+    \ finds you.\n"
   last_voice_mode: clone
-  last_predefined_voice: Emily.wav
-  last_reference_file: rock.mp3
-  last_seed: 42
-  last_chunk_size: 270
+  last_predefined_voice: Alice.wav
+  last_reference_file: kind girl.mp3
+  last_seed: 555
+  last_chunk_size: 80
   last_split_text_enabled: true
   hide_chunk_warning: false
   hide_generation_warning: true
