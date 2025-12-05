@@ -3,6 +3,7 @@ server:
   port: 8004
   use_ngrok: false
   use_auth: false
+  auto_open_browser: false
   auth_username: user
   auth_password: password
   log_file_path: logs\tts_server.log

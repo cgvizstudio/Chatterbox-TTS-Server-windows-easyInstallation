@@ -155,13 +155,17 @@ async def lifespan(app: FastAPI):
             )
         else:
             logger.info("TTS Model loaded successfully via engine.")
-            host_address = get_host()
-            server_port = get_port()
-            browser_thread = threading.Thread(
-                target=lambda: _delayed_browser_open(host_address, server_port),
-                daemon=True,
-            )
-            browser_thread.start()
+            # Only open browser if configured (disable for service mode)
+            if config_manager.get_bool("server.auto_open_browser", True):
+                host_address = get_host()
+                server_port = get_port()
+                browser_thread = threading.Thread(
+                    target=lambda: _delayed_browser_open(host_address, server_port),
+                    daemon=True,
+                )
+                browser_thread.start()
+            else:
+                logger.info("Auto browser open disabled (service mode)")
 
         logger.info("Application startup sequence complete.")
         startup_complete_event.set()

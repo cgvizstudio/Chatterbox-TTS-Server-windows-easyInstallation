@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -Command \"& ''e:\\Chatterbox-TTS-Server-windows-easyInstallation\\services\\install-services.ps1''\")",
+      "Bash(powershell -Command:*)",
+      "Bash(dir:*)",
+      "Bash(\"e:\\Chatterbox-TTS-Server-windows-easyInstallation\\services\\nssm.exe\" get ChatterboxTTS Application)",
+      "Bash(\"e:\\Chatterbox-TTS-Server-windows-easyInstallation\\services\\nssm.exe\" get ChatterboxTTS AppParameters)",
+      "Bash(\"e:\\Chatterbox-TTS-Server-windows-easyInstallation\\services\\nssm.exe\" get:*)",
+      "Bash(timeout /t 15 /nobreak)",
+      "Bash(curl:*)",
+      "Bash(\"e:\\Chatterbox-TTS-Server-windows-easyInstallation\\services\\nssm.exe\" status ChatterboxTTS)",
+      "Bash(\"e:\\Chatterbox-TTS-Server-windows-easyInstallation\\services\\nssm.exe\" status WhisperXServer)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
